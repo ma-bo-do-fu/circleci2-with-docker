@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: selenium/standalone-chrome
+        command: ["/opt/bin/entry_point.sh"]
     steps:
       - checkout
       - run: ps auxw
