@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: selenium/standalone-chrome
+    steps:
+      - checkout
+      - run: ps auxw
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
